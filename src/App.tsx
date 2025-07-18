@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const App: React.FC = () => {
   const [key, setKey] = useState('');
@@ -11,7 +11,7 @@ export const App: React.FC = () => {
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      window.addEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
